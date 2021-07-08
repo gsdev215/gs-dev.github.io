@@ -1,1 +1,1 @@
-# gs-dev.github.io
+# dev.is-a.dev
