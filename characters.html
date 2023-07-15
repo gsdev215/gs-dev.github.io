@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Novel Website</title>
+  <link rel="stylesheet" href="ch/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Novel Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="information.html">Extra Information</a></li>
+        <li><a href="characters.html">Character's Design/Sketches</a></li>
+        <li><a href="maps.html">Maps of the Fantasy World</a></li>
+      </ul>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search">
+        <button type="submit" id="searchButton">Search</button>
+      </form>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Character List</h2>
+      <div id="letterButtons"></div>
+      <ul id="characterList"></ul>
+      <div id="pagination">
+        <button id="prevButton" disabled>Prev</button>
+        <button id="nextButton" disabled>Next</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Connect with Me</h3>
+      <ul class="social-links">
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">PayPal</a></li>
+        <li><a href="#">Patreon</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="ch/script1.js"></script>
+</body>
+</html>

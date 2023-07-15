@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Character Page</h1>
+  </header>
+
+  <main>
+    <section id="characterSection">
+      <h2>Character Information</h2>
+      <div id="characterDetails"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Connect with Me</h3>
+      <ul class="social-links">
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">PayPal</a></li>
+        <li><a href="#">Patreon</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    window.onload = function() {
+      const characterDetailsContainer = document.getElementById('characterDetails');
+      const characterId = window.location.hash.substring(1); // Get the character ID from the URL without the '#'
+
+      // Check if characterId exists and display the character information
+      if (characterId) {
+        // Simulated API request to fetch character details based on ID
+        fetch('characterDetails.json')
+          .then(response => response.json())
+          .then(data => {
+            const characters = data.characters;
+            const character = characters.find(char => char.id === characterId);
+
+            if (character) {
+              // Update the characterDetailsContainer with the character information
+              characterDetailsContainer.innerHTML = `
+                <h3>${character.name}</h3>
+                <p>Nickname: ${character.nickname}</p>
+                <p>Relation: ${character.relation}</p>
+                <p>Basic Bio: ${character.basicBio}</p>
+                <p>Age: ${character.age}</p>
+                <p>Date of Birth: ${character.dateOfBirth}</p>
+                <p>Date of Death: ${character.dateOfDeath}</p>
+                <p>Power Level: ${character.powerLevel}</p>
+                <p>First Appearance: ${character.firstAppearance}</p>
+                <p>Description: ${character.description}</p>
+                <p>Background: ${character.background}</p>
+                <p>Events: ${character.events}</p>
+              `;
+            } else {
+              characterDetailsContainer.innerHTML = '<p>Character not found.</p>';
+            }
+          })
+          .catch(error => console.log('Error:', error));
+      } else {
+        characterDetailsContainer.innerHTML = '<p>No character ID provided.</p>';
+      }
+    };
+  </script>
+</body>
+</html>

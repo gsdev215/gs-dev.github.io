@@ -1,0 +1,37 @@
+{
+    "characters": [
+      {
+        "id": "abigail",
+        "name": "Abigail",
+        "nickname": "Abby",
+        "relation": "Protagonist",
+        "basicBio": "Abigail is a brave and adventurous young woman...",
+        "age": "25",
+        "dateOfBirth": "March 12, 1998",
+        "dateOfDeath": "-",
+        "powerLevel": "Intermediate",
+        "firstAppearance": "Chapter 1",
+        "description": "Abigail is known for her courageous spirit...",
+        "background": "Abigail was born in a small village...",
+        "events": "Throughout the story, Abigail...",
+        "image": "abigail.jpg"
+      },
+      {
+        "id": "adam",
+        "name": "Adam",
+        "nickname": "None",
+        "relation": "Supporting Character",
+        "basicBio": "Adam is a wise and mysterious figure...",
+        "age": "Unknown",
+        "dateOfBirth": "-",
+        "dateOfDeath": "-",
+        "powerLevel": "Advanced",
+        "firstAppearance": "Chapter 5",
+        "description": "Adam possesses ancient knowledge...",
+        "background": "Adam has traveled the world for centuries...",
+        "events": "Adam plays a crucial role...",
+        "image": "adam.jpg"
+      }
+    ]
+  }
+  
